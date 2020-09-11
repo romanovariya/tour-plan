@@ -1,2 +1,2 @@
 # tour-plan
-My GLO Academy project
+Учебный проект для практики на курсе Веб Старт от Glo Academy. Автор курса — Артем Исламов.
