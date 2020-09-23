@@ -26,4 +26,4 @@ var hotelSlider = new Swiper('.hotel-slider', {
         onlyInViewport: false,
       },
   });
-  $('.newsletter').parallax({imageSrc: '../img/newsletter-bg.jpeg'});
+  $('.newsletter').parallax({imageSrc: 'img/newsletter-bg.jpeg'});
