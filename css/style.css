@@ -1270,6 +1270,11 @@ template {
   .container {
     max-width: 280px;
   }
+  .menu-button {
+    -webkit-box-align: top;
+        -ms-flex-align: top;
+            align-items: top;
+  }
   .navbar-top {
     padding-top: 28px;
     padding-bottom: 28px;
