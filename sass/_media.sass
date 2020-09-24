@@ -18,10 +18,9 @@
             padding-top: 30px
             padding-bottom: 30px
         &__search
-            margin-left: auto
+            margin-left: 47px
         &-menu
-            padding-top: 22px
-            padding-bottom: 22px
+            padding: 22px 13px
             &__link
                 font-size: 12px
                 line-height: 15px
@@ -29,6 +28,7 @@
         &__input
             width: 340px
     .hotel
+        padding-bottom: 60px
         &-grid
             flex-direction: column
         &__slider
@@ -39,13 +39,32 @@
             width: 100%
     .booking
         width: 340px
+        padding: 26px 22px
     .map
         width: 340px
+        height: 210px
     .reviews
         &-slider
             &__item
                 max-width: 580px
-@media (max-width: 768px)
+                &::after, &::before
+                    display: none 
+            &__button
+                &--prev
+                    left: 11%
+                    margin-left: -70px
+                    transform: translateY(56%)
+                &--next
+                    right: 11%
+                    margin-right: -70px
+                    transform: translateY(56%)
+        &__title
+            font-size: 30px
+            line-height: 38px
+            margin-bottom: 50px
+    .newsletter
+        padding: 92px 0
+@media (max-width: 767px)
     .container
         max-width: 576px
         width: 92%
@@ -106,8 +125,6 @@
         &-slider
             &__item
                 padding: 0 30px 30px
-                &::after, &::before
-                    display: none 
             &__button
                 top: 32px
                 &--prev
