@@ -1153,6 +1153,222 @@ template {
   cursor: pointer;
 }
 
+.packages {
+  padding-top: 40px;
+  padding-bottom: 70px;
+}
+
+.packages-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (500px)[2];
+      grid-template-rows: repeat(2, 500px);
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 30px;
+}
+
+.packages__flash-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+}
+
+.packages__card {
+  grid-column: span 2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.packages-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.packages__title {
+  margin-top: 0;
+  margin-bottom: 65px;
+}
+
+.flash-card {
+  height: 500px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.flash-card__img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.flash-card__label {
+  position: absolute;
+  font-style: normal;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #EC1F46;
+  border-radius: 0px 4px 4px 0px;
+  top: 26px;
+  left: 0;
+}
+
+.flash-card__label--small {
+  font-size: 8px;
+  line-height: 10px;
+  padding: 4px 9px;
+}
+
+.flash-card__label--big {
+  font-size: 12px;
+  line-height: 15px;
+  padding: 8px 11px;
+}
+
+.flash-card__block {
+  background-color: #0A223D;
+  width: 100%;
+}
+
+.flash-card__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  color: #ffffff;
+  margin-bottom: 27px;
+}
+
+.flash-card__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flash-card__text:not(:last-child) {
+  margin-bottom: 11px;
+}
+
+.flash-card__icon {
+  margin-right: 14px;
+}
+
+.flash-card__info {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+}
+
+.flash-card__description {
+  width: 14px;
+  height: 14px;
+}
+
+.flash-card__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flash-card__old-price {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  color: #ffffff;
+}
+
+.flash-card__new-price {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.flash-card__button {
+  padding: 11px 26px;
+  background-color: #EC1F46;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  cursor: pointer;
+}
+
+.flash-block {
+  padding-left: 43px;
+  padding-right: 21px;
+  padding-top: 46px;
+  padding-bottom: 35px;
+}
+
+.flash-block__description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 160.6%;
+  color: #ffffff;
+  margin-bottom: 45px;
+}
+
+.flash-block__booking {
+  margin-bottom: 37px;
+  margin-left: 4px;
+}
+
+.flash-block__stars {
+  margin-bottom: 5px;
+}
+
+.small-flash {
+  padding-left: 32px;
+  padding-right: 21px;
+  padding-top: 30px;
+  padding-bottom: 25px;
+}
+
+.small-flash__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  color: #ffffff;
+  margin-bottom: 23px;
+}
+
+.small-flash__booking {
+  margin-bottom: 24px;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -1169,6 +1385,21 @@ template {
   .card {
     width: 230px;
     height: 230px;
+  }
+  .flash-block {
+    height: 500px;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-bottom: 25px;
+  }
+  .flash-block__booking {
+    margin-bottom: 25px;
+  }
+  .flash-block__description {
+    margin-bottom: 30px;
+  }
+  .flash-card__title {
+    margin-bottom: 20px;
   }
 }
 
@@ -1267,6 +1498,12 @@ template {
     maw: 160px;
     min-height: 40px;
     word-break: break-word;
+  }
+  .packages-wrapper {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (500px)[3];
+        grid-template-rows: repeat(3, 500px);
   }
 }
 
@@ -1382,6 +1619,21 @@ template {
     width: 49%;
     height: 255px;
   }
+  .packages-wrapper {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+  }
+  .flash-block {
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-bottom: 25px;
+  }
+  .small-flash {
+    padding-left: 25px;
+    padding-right: 15px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1402,6 +1654,38 @@ template {
   }
   .subscribe {
     width: 100%;
+  }
+  .packages-wrapper {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (500px)[5];
+        grid-template-rows: repeat(5, 500px);
+    -webkit-column-gap: 0;
+            column-gap: 0;
+  }
+  .packages__card {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 50% 50%;
+        grid-template-rows: 50% 50%;
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+    grid-column: span 1;
+  }
+  .packages__title {
+    margin-bottom: 50px;
+  }
+  .packages-title {
+    font-size: 26px;
+    line-height: 34px;
+  }
+  .flash-card__label--big {
+    font-size: 8px;
+    line-height: 10px;
+    padding: 4px 9px;
+  }
+  .flash-block__description {
+    display: none;
   }
 }
 
@@ -1512,6 +1796,10 @@ template {
   .card {
     width: 100%;
     height: 255px;
+  }
+  .packages-title {
+    font-size: 18px;
+    line-height: 23px;
   }
 }
 /*# sourceMappingURL=style.css.map */
