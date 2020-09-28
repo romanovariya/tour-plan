@@ -1495,7 +1495,7 @@ template {
     margin-bottom: 18px;
   }
   .card__title {
-    maw: 160px;
+    max-width: 160px;
     min-height: 40px;
     word-break: break-word;
   }
