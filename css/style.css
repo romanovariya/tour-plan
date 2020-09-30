@@ -1444,6 +1444,29 @@ template {
   grid-column: span 2;
 }
 
+.footer__bottom {
+  margin-top: 70px;
+  grid-column: span 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__bottom-links {
+  text-decoration: none;
+  color: #bdbdbd;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+}
+
 .footer__legal {
   -ms-grid-column-align: end;
       justify-self: end;
@@ -1483,7 +1506,11 @@ template {
 }
 
 .footer__title--mb-3 {
-  margin-bottom: 27px;
+  margin-bottom: 34px;
+}
+
+.footer__title--mb-2 {
+  margin-bottom: 25px;
 }
 
 .footer__title--mt-3 {
@@ -1539,6 +1566,10 @@ template {
   margin-bottom: 15px;
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
 }
 
 .footer__message {
@@ -1550,6 +1581,10 @@ template {
       flex-basis: 100%;
   margin-bottom: 23px;
   height: 123px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
 }
 
 .footer__button {
@@ -1560,6 +1595,10 @@ template {
   background-color: #EC1F46;
   color: #ffffff;
   border-radius: 4px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
 }
 
 .footer__info {
@@ -1568,6 +1607,28 @@ template {
   font-size: 12px;
   line-height: 15px;
   color: #bdbdbd;
+}
+
+.bottom__pay {
+  width: 136px;
+  height: 22px;
+}
+
+.bottom__img {
+  width: 100%;
+  height: 100%;
+}
+
+.bottom__pages {
+  margin-right: 277px;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 283px;
 }
 
 @media (max-width: 1200px) {
