@@ -80,7 +80,7 @@
     .newsletter
         padding: 92px 0
     .activities
-        padding: 34px 0 98px 0
+        padding: 34px 0 60px 0
         &-wrapper
             flex-wrap: wrap
     .card
@@ -95,6 +95,46 @@
         &-wrapper
             grid-template-columns: repeat(2, 1fr)
             grid-template-rows: repeat(3, 500px)
+    .footer
+        padding-top: 72px
+        &-wrapper
+            grid-template-columns: repeat(7, 1fr)
+            grid-row-gap: 45px
+            grid-column-gap: 10px
+        &__logo
+            width: 96px
+            height: 108px
+            grid-row: 1 / 2
+            grid-column: span 2
+        &__input
+            flex-basis: 47%
+        &__social
+            &-network
+                grid-row: 1 / 2
+                grid-column: span 5
+                align-self: center
+                margin-left: -15px
+        &__categories
+            grid-row: 2 / 3
+            grid-column: span 2
+        &__additional
+            grid-column: span 3
+        &__legal
+            grid-column: span 2
+            justify-self: start
+            margin-left: -10px
+        &__contact
+            &-details
+                margin-top: 5px
+                grid-column: span 5
+                grid-row: 3
+            &-form
+                grid-column: span 6
+                grid-row: 4
+                max-width: 539px
+        &__bottom
+            grid-column: span 7
+            margin-top: 8px
 @media (max-width: 767px)
     .container
         max-width: 576px
