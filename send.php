@@ -30,7 +30,6 @@ try {
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
     $mail->Username   = 'besttourplan.glo@gmail.com'; // Логин на почте
-    $mail->Password   = 'ILc6o#)hO$u70xH<<'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('besttourplan.glo@gmail.com', 'maria kop'); // Адрес самой почты и имя отправителя
