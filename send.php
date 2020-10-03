@@ -8,15 +8,39 @@ require 'phpmailer/Exception.php';
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
+$news = $_POST['news'];
+$email = $_POST['email'];
+$modal_name = $_POST['modal_name'];
+$modal_phone = $_POST['modal_phone'];
+$modal_message = $_POST['modal_message'];
 
+
+
+if (isset($_POST['newsletter'])) {
+    $title = "Новая заявка на рассылку Best Tour Plan";
+    $body = "
+    <h2>Заявка на получение рассылки</h2>
+    <b>email:</b><br>$news
+    ";
+} else if (isset($_POST['footermail'])) {
+    $title = "Новое обращение Best Tour Plan";
+    $body = "
+    <h2>Новое обращение</h2>
+    <b>Имя:</b> $name<br>
+    <b>Телефон:</b> $phone<br><br>
+    <b>Сообщение:</b><br>$message
+    ";
+} else if (isset($_POST['modalmail'])) {
+    $title = "Бронирование Grand Hilton Hotel";
+    $body = "
+    <h2>Заявка на бронирование отеля</h2>
+    <b>Имя:</b> $modal_name<br>
+    <b>Телефон:</b> $modal_phone<br>
+    <b>Почта:</b> $email<br><br>
+    <b>Сообщение:</b><br>$modal_message
+    ";
+}
 // Формирование самого письма
-$title = "Новое обращение Best Tour Plan";
-$body = "
-<h2>Новое обращение</h2>
-<b>Имя:</b> $name<br>
-<b>Телефон:</b> $phone<br><br>
-<b>Сообщение:</b><br>$message
-";
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -30,7 +54,7 @@ try {
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
     $mail->Username   = 'besttourplan.glo@gmail.com'; // Логин на почте
-    $mail->Password   = 'ILc6o#)hO$u70xH<<'; // Пароль на почте
+    
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('besttourplan.glo@gmail.com', 'maria kop'); // Адрес самой почты и имя отправителя
@@ -52,4 +76,11 @@ try {
     }
 
     // Отображение результата
-header('Location: thankyou.html');
+    if (isset($_POST['newsletter'])) {
+        header('Location: thanknewsletter.html');
+    } else if (isset($_POST['footermail'])) {
+        header('Location: thankyou.html');
+    } else if (isset($_POST['modalmail'])) {
+        header('Location: thankyou.html');
+    }
+
