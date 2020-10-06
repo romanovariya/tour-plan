@@ -8,11 +8,7 @@ require 'phpmailer/Exception.php';
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
-$news = $_POST['news'];
 $email = $_POST['email'];
-$modal_name = $_POST['modal_name'];
-$modal_phone = $_POST['modal_phone'];
-$modal_message = $_POST['modal_message'];
 
 
 
@@ -20,7 +16,7 @@ if (isset($_POST['newsletter'])) {
     $title = "Новая заявка на рассылку Best Tour Plan";
     $body = "
     <h2>Заявка на получение рассылки</h2>
-    <b>email:</b><br>$news
+    <b>email:</b><br>$email
     ";
 } else if (isset($_POST['footermail'])) {
     $title = "Новое обращение Best Tour Plan";
@@ -34,10 +30,10 @@ if (isset($_POST['newsletter'])) {
     $title = "Бронирование Grand Hilton Hotel";
     $body = "
     <h2>Заявка на бронирование отеля</h2>
-    <b>Имя:</b> $modal_name<br>
-    <b>Телефон:</b> $modal_phone<br>
+    <b>Имя:</b> $name<br>
+    <b>Телефон:</b> $phone<br>
     <b>Почта:</b> $email<br><br>
-    <b>Сообщение:</b><br>$modal_message
+    <b>Сообщение:</b><br>$message
     ";
 }
 // Формирование самого письма
@@ -54,6 +50,7 @@ try {
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
     $mail->Username   = 'besttourplan.glo@gmail.com'; // Логин на почте
+    
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('besttourplan.glo@gmail.com', 'maria kop'); // Адрес самой почты и имя отправителя

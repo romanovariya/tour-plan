@@ -73,6 +73,10 @@ input {
   cursor: pointer;
 }
 
+.invalid {
+  color: red;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -595,6 +599,14 @@ template {
 
 .hotel-info__description {
   margin: 0;
+}
+
+.hotel-info__back-button {
+  color: #0A223D;
+  border: 1px solid #EC1F46;
+  padding: 10px 10px;
+  border-radius: 8px;
+  text-decoration: none;
 }
 
 .hotel-name {
@@ -1618,6 +1630,10 @@ template {
 }
 
 .footer__input {
+  width: 100%;
+}
+
+.footer__input-group {
   margin-bottom: 15px;
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
@@ -1685,7 +1701,7 @@ template {
 
 .modal__dialog {
   position: fixed;
-  top: 35.5%;
+  top: 50%;
   left: 50%;
   max-width: 478px;
   padding: 33px 88px;
@@ -1729,7 +1745,7 @@ template {
 
 .modal__input {
   width: 100%;
-  margin-bottom: 15px;
+  margin-top: 15px;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -1739,7 +1755,11 @@ template {
 .modal__message {
   width: 100%;
   min-height: 123px;
-  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.modal__button {
+  margin-top: 15px;
 }
 
 .modal__info {
@@ -1905,7 +1925,7 @@ template {
     grid-row: 1 / 2;
     grid-column: span 2;
   }
-  .footer__input {
+  .footer__input-proup {
     -ms-flex-preferred-size: 47%;
         flex-basis: 47%;
   }
@@ -2145,7 +2165,7 @@ template {
     padding-left: 25px;
     padding-right: 15px;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }

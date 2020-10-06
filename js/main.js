@@ -60,4 +60,27 @@ $(document).ready(function () {
       modalDialog.removeClass('modal__dialog--visible');
     }
   });
+  //обработка форм
+  $(".form").each(function () {
+    $(this).validate({
+      errorClass: "invalid",
+      messages: {
+        name: {
+          required: "Please specify your name",
+          minlength: "Your name must be at least 2 letterls long",
+        },
+        email: {
+          required: "We need your email address to contact you",
+          email: "Your email address must be in the format of name@domain.com"
+        },
+        phone: {
+          required: "Your phone number is required",
+          minlength: "Your phone number must be at least 11 symbols long",
+        },
+        news: {
+          required: "We need your email address to contact you",
+        },
+      },
+    });
+  });
 });

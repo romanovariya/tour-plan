@@ -95,6 +95,9 @@
                         </div>
                         <p class="hotel-description hotel-info__description">Your message message has been sent. Our manager will contact you soon </p>
 					</div>
+					<a href="index.html" class="hotel-info__back-button">
+						Back to main page
+					</a>
 				</div>
 			</div>
 			<!-- /.container -->
@@ -191,11 +194,16 @@
 						</div>
 						<div class="footer__contact-form">
 							<h3 class="footer__title footer__title--mb-3">Send us a message</h3>
-							<form action="send.php" method="POST" class="footer__form">
-								<input type="text" class="input footer__input" placeholder="Your Full Name*" name="name">
-								<input type="text" class="input footer__input" placeholder="Phone Number*" name="phone">
+							<form action="send.php" method="POST" class="footer__form form">
+								<div class="footer__input-group">
+									<input type="text" class="input footer__input" placeholder="Your Full Name*" name="name" required>
+								</div>
+								<div class="footer__input-group">
+									<input type="tel" class="input footer__input footer__input--phone" placeholder="Phone Number*" name="phone" required>
+								</div>
 								<textarea class="message footer__message" placeholder="Message" name="message"></textarea>
-								<button class="button footer__button">Send</button>
+								<!-- <button class="button footer__button">Send</button> -->
+								<input type="submit" name="footermail" class="button footer__button" value="Send">
 								<span class="footer__info">* Required Fields</span>
 							</form>
 						</div>
@@ -218,6 +226,8 @@
 		<script src="js/swiper-bundle.min.js"></script>
 		<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 		<script src="js/parallax.min.js"></script>
+		<script src="js/jquery.validate.min.js"></script>
+		<script src="js/jquery.mask.min.js"></script>
 		<script src="js/main.js"></script>
 </body>
 </html>
