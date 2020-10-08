@@ -10,7 +10,7 @@ $(document).ready(function () {
     },
     keyboard: {
         enabled: true,
-        onlyInViewport: false,
+        onlyInViewport: true,
       },
   });
   var reviewSlider = new Swiper('.reviews-slider', {
@@ -21,12 +21,8 @@ $(document).ready(function () {
       nextEl: '.reviews-slider__button--next',
       prevEl: '.reviews-slider__button--prev',
     },
-    keyboard: {
-        enabled: true,
-        onlyInViewport: false,
-      },
   });
-  $('.newsletter').parallax({imageSrc: 'img/newsletter-bg.jpeg'});
+  $('.newsletter').parallax({imageSrc: 'img/newsletter-bg.jpg'});
 
   var menuButton = $(".menu-button");
   menuButton.on("click", function() {
@@ -77,10 +73,27 @@ $(document).ready(function () {
           required: "Your phone number is required",
           minlength: "Your phone number must be at least 11 symbols long",
         },
-        news: {
-          required: "We need your email address to contact you",
-        },
       },
     });
   });
+  $(".subscribe").validate({
+      errorClass: "news__invalid",
+      messages: {
+        email: {
+          required: "We need your email address to contact you",
+          email: "Your email address must be in the format of name@domain.com"
+        },
+      },
+    });
+  AOS.init();
+  $(".map__img").hover(function(){
+    $(".map__img").css("display", "none");
+    $(".map__frame").css("display", "block");
+  })
+
+  $(".map__frame").mouseout(function(){
+    $(".map__frame").css("display", "none");
+    $(".map__img").css("display", "block");
+  })
+
 });

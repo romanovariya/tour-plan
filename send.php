@@ -27,7 +27,7 @@ if (isset($_POST['newsletter'])) {
     <b>Сообщение:</b><br>$message
     ";
 } else if (isset($_POST['modalmail'])) {
-    $title = "Бронирование Grand Hilton Hotel";
+    $title = "Бронирование Best Tour Plan";
     $body = "
     <h2>Заявка на бронирование отеля</h2>
     <b>Имя:</b> $name<br>
@@ -73,10 +73,10 @@ try {
 
     // Отображение результата
     if (isset($_POST['newsletter'])) {
-        header('Location: thanknewsletter.html');
+        header('Location: https://riyaromanova.ru/tour-plan/thanknewsletter');
     } else if (isset($_POST['footermail'])) {
-        header('Location: thankyou.html');
+        header('Location: https://riyaromanova.ru/tour-plan/thankyou');
     } else if (isset($_POST['modalmail'])) {
-        header('Location: thankyou.html');
+        header('Location: https://riyaromanova.ru/tour-plan/thankyou');
     }
 

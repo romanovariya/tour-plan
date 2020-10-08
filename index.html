@@ -5,15 +5,36 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="format-detection" content="telephone=no">
 		<title>Best tour plan - Hotel Booking</title>
+		<!-- favicon -->
+		<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+		<link rel="manifest" href="favicon/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+
+		<!-- favicon -->
 		<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="css/swiper-bundle.min.css">
+		<link rel="stylesheet" href="css/aos.css">
 		<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 		<header class="navbar navbar--mobile--fixed">
 				<div class="container">
 						<div class="navbar-top">
-								<a href="index.html" class="logo">
+								<a href="https://riyaromanova.ru/tour-plan/" class="logo">
 										<img src="img/horizontal-logo.svg" alt="Logo: Best Tour Plan" class="logo__image">
 								</a>
 
@@ -106,7 +127,8 @@
 					<!-- /.hotel-info__left -->
 					<div class="rating hotel-info__rating">
 						<span class="rating__text">User Rattings</span>
-						<span class="rating__counter">4.5/5</span>
+						<span class="rating__counter">4.5/<span class="rating__counter-small">5</span>
+						</span>
 					</div>
 					<!-- /.hotel-info__right -->
 				</div>
@@ -159,7 +181,8 @@
 						</div>
 						<!-- /.booking -->
 						<div class="map">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.5414950278614!2d98.2992197!3d7.8382524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x305025650c33dbab%3A0xa67a542329d011e1!2z0J_RhdGD0LrQtdGCLCDQmtCw0YDQvtC9LCDQntGC0LXQu9GMINCl0LjQu9GC0L7QvQ!5e0!3m2!1sru!2sru!4v1600797492748!5m2!1sru!2sru"   style="border:0; width:100%; height:213px; "></iframe>
+							<img class="map__img" src="img/map-img.png" alt="Map">
+							<iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.5414950278614!2d98.2992197!3d7.8382524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x305025650c33dbab%3A0xa67a542329d011e1!2z0J_RhdGD0LrQtdGCLCDQmtCw0YDQvtC9LCDQntGC0LXQu9GMINCl0LjQu9GC0L7QvQ!5e0!3m2!1sru!2sru!4v1600797492748!5m2!1sru!2sru"   style="border:0; width:100%; height:213px; "></iframe>
 						</div>
 					</div>
 					<!-- /.hotel-right -->
@@ -173,7 +196,7 @@
 					Other Packages
 				</h2>
 				<div class="packages-wrapper">
-					<div class="flash-card packages__card">
+					<div class="flash-card packages__card" data-aos="fade-right" data-aos-duration="500">
 						<div class="flash-card__label flash-card__label--big">Flash Offer</div>
 						<img src="img/package-1.jpeg" alt="Hotel Blue Haven" class="flash-card__img">
 
@@ -205,12 +228,12 @@
 							<div class="flash-card__old-price">$ 10,500</div>
 							<div class="flash-card__bottom">	
 								<div class="flash-card__new-price">$ 8,500</div>
-								<button class="flash-card__button">Book Now</button>
+								<button data-toggle="modal" class="flash-card__button">Book Now</button>
 							</div>
 						</div>
 						<!-- flash-card__block -->
 					</div>
-					<div class="flash-card packages__flash-card">
+					<div class="flash-card packages__flash-card" data-aos="fade-left" data-aos-duration="500">
 						<div class="flash-card__label  flash-card__label--small">Flash Offer</div>
 						<img src="img/package-2.jpeg" alt="LUX* Belle Mare" class="flash-card__img">
 						<div class="small-flash flash-card__block">
@@ -233,11 +256,11 @@
 							<div class="flash-card__old-price">$ 8,500</div>
 							<div class="flash-card__bottom">	
 								<div class="flash-card__new-price">$ 3,000</div>
-								<button class="flash-card__button">Book Now</button>
+								<button data-toggle="modal" class="flash-card__button">Book Now</button>
 							</div>
 						</div>
 					</div>
-					<div class="flash-card packages__flash-card">
+					<div class="flash-card packages__flash-card" data-aos="fade-up" data-aos-duration="700">
 						<div class="flash-card__label flash-card__label--small">Flash Offer</div>
 						<img src="img/package-3.jpeg" alt="White Palace" class="flash-card__img">
 						<div class="small-flash flash-card__block">
@@ -260,11 +283,11 @@
 							<div class="flash-card__old-price">$ 10,500</div>
 							<div class="flash-card__bottom">	
 								<div class="flash-card__new-price">$ 9,500</div>
-								<button class="flash-card__button">Book Now</button>
+								<button data-toggle="modal" class="flash-card__button">Book Now</button>
 							</div>
 						</div>
 					</div>
-					<div class="flash-card packages__flash-card">
+					<div class="flash-card packages__flash-card" data-aos="fade-up" data-aos-duration="700">
 						<div class="flash-card__label flash-card__label--small">Flash Offer</div>
 						<img src="img/package-4.jpeg" alt="Luxury Place" class="flash-card__img">
 						<div class="small-flash flash-card__block">
@@ -287,11 +310,11 @@
 							<div class="flash-card__old-price">$ 4,500</div>
 							<div class="flash-card__bottom">	
 								<div class="flash-card__new-price">$ 2,500</div>
-								<button class="flash-card__button">Book Now</button>
+								<button data-toggle="modal" class="flash-card__button">Book Now</button>
 							</div>
 						</div>
 					</div>
-					<div class="flash-card packages__flash-card">
+					<div class="flash-card packages__flash-card" data-aos="fade-up" data-aos-duration="700">
 						<div class="flash-card__label flash-card__label--small">Flash Offer</div>
 						<img src="img/package-5.jpeg" alt="Hotel Five Star" class="flash-card__img">
 						<div class="small-flash flash-card__block">
@@ -314,7 +337,7 @@
 							<div class="flash-card__old-price">$ 6,500</div>
 							<div class="flash-card__bottom">	
 								<div class="flash-card__new-price">$ 3,500</div>
-								<button class="flash-card__button">Book Now</button>
+								<button data-toggle="modal" class="flash-card__button">Book Now</button>
 							</div>
 						</div>
 					</div>
@@ -329,8 +352,11 @@
 					subscribe to our
 					<span class="newsletter-title__strong">Newsletter</span>
 				</h2>
-				<form action="send.php" method="POST" class="subscribe newsletter__subscribe form">
-					<input type="email" class="subscribe__input" placeholder="Your email address" name="email" required>
+				<form action="send.php" method="POST" class="subscribe newsletter__subscribe">
+					<div class="subscribe__group">
+						<input type="email" class="subscribe__input" placeholder="Your email address" name="email" required>
+						
+					</div>
 					<input  type="submit" name="newsletter" class="button subscribe__button" value="Send">
 					<!-- <button class="subscribe__button">Send</button> -->
 			</form>
@@ -367,7 +393,7 @@
 						<div class="swiper-slide">
 							<div class="reviews-slider__item">
 								<div class="reviews-slider__profile">
-									<img src="img/reviews-avatar-1.jpeg" alt="Photo: Dorian Grey" class="reviews-slider__avatar">
+									<img src="img/reviews-avatar-1.jpg" alt="Photo: Dorian Grey" class="reviews-slider__avatar">
 									<h3 class="reviews-slider__username">Dorian Grey</h3>
 									<span class="reviews-slider__date">Stayed 1 Jan, 2018</span>
 									<div class="stars reviews-slider__rating">
@@ -388,7 +414,7 @@
 						<div class="swiper-slide">
 							<div class="reviews-slider__item">
 								<div class="reviews-slider__profile">
-									<img src="img/reviews-avatar-2.jpeg" alt="Photo: Ross Geller" class="reviews-slider__avatar">
+									<img src="img/reviews-avatar-2.jpg" alt="Photo: Ross Geller" class="reviews-slider__avatar">
 									<h3 class="reviews-slider__username">Ross Geller</h3>
 									<span class="reviews-slider__date">Stayed 23 Dec, 2019</span>
 									<div class="stars reviews-slider__rating">
@@ -419,33 +445,33 @@
 			<div class="container">
 				<h2 class="activities__title">Other Activities</h2>
 				<div class="activities-wrapper">
-					<div class="card activities__card">
+					<div class="card activities__card" data-aos="fade-up" data-aos-duration="300" >
 						<img src="img/activity-1.jpeg" alt="The curious corner 
 						of chamarel" class="card__image">
 						<h3 class="card__title">The curious corner<br>
 							of chamarel</h3>
-						<button class="card__button">Book Now</button>
+						<button data-toggle="modal" class="card__button">Book Now</button>
 					</div>
 					<!-- card -->
-					<div class="card activities__card">
+					<div class="card activities__card" data-aos="fade-up" data-aos-duration="500" >
 						<img src="img/activity-2.jpeg" alt="Gymkhana club golf
 						course" class="card__image">
 						<h3 class="card__title">Gymkhana club golf<br>course</h3>
-						<button class="card__button">Book Now</button>
+						<button data-toggle="modal" class="card__button">Book Now</button>
 					</div>
 					<!-- card -->
-					<div class="card activities__card">
+					<div class="card activities__card" data-aos="fade-up" data-aos-duration="700" >
 						<img src="img/activity-3.jpeg" alt="Tamarind falls hiking
 						trip - full day" class="card__image">
 						<h3 class="card__title">Tamarind falls hiking<br> trip - full day</h3>
-						<button class="card__button">Book Now</button>
+						<button data-toggle="modal" class="card__button">Book Now</button>
 					</div>
 					<!-- card -->
-					<div class="card activities__card">
+					<div class="card activities__card" data-aos="fade-up" data-aos-duration="900" >
 						<img src="img/activity-4.jpeg" alt="The blue marine discovery
 						quest" class="card__image">
 						<h3 class="card__title">The blue marine discovery<br>quest</h3>
-						<button class="card__button">Book Now</button>
+						<button data-toggle="modal" class="card__button">Book Now</button>
 					</div>
 					<!-- card -->
 				</div>
@@ -455,7 +481,9 @@
 		<footer class="footer">
 			<div class="container">
 				<div class="footer-wrapper">
-					<img src="img/vertical-logo.svg" alt="Logo; Best Tour Plan" class="logo footer__logo">
+					<a href="https://riyaromanova.ru/tour-plan/" class="footer__logo">
+						<img src="img/vertical-logo.svg" alt="Logo: Best Tour Plan" class="logo footer__logo-img">
+					</a>
 					<div class="footer__list footer__categories">
 						<div class="footer__title">ALL CATEGORIES</div>
 						<ul class="footer__ul">
@@ -528,17 +556,18 @@
 								</li>
 								<li class="footer__item footer__item--mb-2">
 									<div class="footer__icon-wrapper"><img src="img/phone-call.svg" alt="Icon: phone-call" class="footer__icon"></div>
-									Tel (business hours) : 269 1500 <br>
-									Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm) <br>
-									Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm) <br>
-
+									<p class="footer__telephones">
+										Tel (business hours) : <a href="tel:2691500" class="footer__num">269 1500</a> <br>
+										Tel (hotline) Monday - Saturday: <a href="tel:52-56-61-38" class="footer__num">52-56-61-38</a> (08:00 am – 20:00 pm) <br>
+										Tel (hotline) Sunday: <a href="tel:52-56-61-38" class="footer__num">52-56-61-38</a> (08:00 am – 14:00 pm) <br>
+									</p>
 								</li>
 								<li class="footer__item footer__item--mb-2">
 
 									<div class="footer__icon-wrapper">
 										<img src="img/mail.svg" alt="Icon: mail" class="footer__icon">
 									</div>
-									cherly.lawson@example.com
+									<a href="mailto:cherly.lawson@example.com" class="footer__mail">cherly.lawson@example.com</a>
 								</li>
 							</ul>
 						</div>
@@ -593,10 +622,10 @@
 		</div>
 		<script src="js/jquery-3.5.1.min.js"></script>
 		<script src="js/swiper-bundle.min.js"></script>
-		<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 		<script src="js/parallax.min.js"></script>
 		<script src="js/jquery.validate.min.js"></script>
 		<script src="js/jquery.mask.min.js"></script>
-		<script src="js/main.js"></script>
+		<script src="js/aos.js"></script>
+		<script src="js/main.min.js"></script>
 </body>
 </html>

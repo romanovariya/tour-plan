@@ -40,11 +40,13 @@
     width: 350px
     height: 55px   
     border-radius: 4px
-    overflow: hidden
+    &__group
+        position: relative
+        height: 75px
     &__input
         position: absolute
         width: 100%
-        height: 100%
+        height: 55px
         border: none
         padding-left: 33px
         padding-right: 75px
@@ -53,6 +55,7 @@
         font-size: 14px
         line-height: 18px   
         color: $forms
+        border-radius: 4px
     &__button
         position: absolute
         min-width: 65px
@@ -61,7 +64,13 @@
         border-radius: 0
         right: 0
         top: 0
-        height: 100%
+        height: 55px
         border: none
         background-color: $primary
         color: $light
+        border-radius: 0 4px 4px 0
+label
+    &.news__invalid
+        bottom: 0
+        position: absolute
+        color: red
